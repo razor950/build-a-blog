@@ -22,7 +22,7 @@ def index():
 
 @app.route('/blog')
 def blog():
-    blog_id = int(request.args.get('id'))
+    blog_id = request.args.get('id')
 
     if blog_id == None:
         posts = Blog.query.all()
